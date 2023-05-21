@@ -16,7 +16,7 @@ def get_mutations(orig):
 # Generate dict mapping sequence to intensity
 ets2intensity={}
 Ets_maxIntensity=0
-for line in open("Ets1_8mers.txt").read().rstrip().split("\n"): # reference PBM data
+for line in open("Figure2-Ets1_8mers.txt").read().rstrip().split("\n"): # reference PBM data
     a=line.split("\t")
     intensity=float(a[3])
     ets2intensity[a[0]]=intensity
@@ -44,7 +44,7 @@ x_vals = np.array([0, ji, ji*2, 1, 1+ji, 1+ji*2, 6, 6+ji, 6+ji*2, 7, 7+ji, 7+ji*
 x_offsets = [0, 16, 41, 70, 103, 120]
 
 # Determining ETS sites from foxf enhancer in putativeEnhancers_Ci.txt
-for line in open("putativeEnhancers_Ci.txt").read().rstrip().split("\n"): # input file name
+for line in open("Figure2-putativeEnhancers_Ci.txt").read().rstrip().split("\n"): # input file name
     if line[0]==">":
         Name=line.split(">")[1]
         continue
