@@ -63,7 +63,7 @@ for i, ETS_site in enumerate(ETS_sites_to_plot):
     all_x_vals = np.concatenate((all_x_vals, these_x_vals))
     all_y_vals += calc_all_fold_changes(ETS_site)
 
-plt.figure(figsize=(3.3, 3.6))
+plt.figure(figsize=(3.3, 5.4))
 plt.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
 plt.plot([-5, 133], [3, 3], 'b--')
 plt.plot([-5, 133], [1, 1], 'c--')
